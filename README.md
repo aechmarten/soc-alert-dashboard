@@ -15,8 +15,7 @@ An interactive platform for cybersecurity analysts to prioritize alerts using a 
 ├── data/
 │   ├── GUIDE_Test.csv       # Testing dataset without IncidentGrade (download via Kaggle)
 │   └── GUIDE_Train.csv      # Training dataset with IncidentGrade (download via Kaggle)
-├── download_data.sh         # Script to fetch full dataset from Kaggle
-├── train.py                   # Training pipeline: data prep, model train, metrics export
+├── train.py                 # Training pipeline: data prep, model train, metrics export
 ├── webapp.py                # Streamlit dashboard for EDA and explainability
 ├── requirements.txt         # Pinned Python dependencies
 ├── README.md                # This guide
@@ -27,7 +26,6 @@ An interactive platform for cybersecurity analysts to prioritize alerts using a 
 
 - **Python** 3.9–3.11
 - **Git**
-- **Kaggle API** credentials (for full dataset)
 - **8 GB+ RAM** recommended
 
 ## ⚙️ Installation
