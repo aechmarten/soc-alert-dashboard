@@ -78,7 +78,6 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 
 1. **Upload** your prepared `GUIDE_Test.csv` file.
 2. Explore **EDA charts**:
-   - Daily alert vs. incident volumes
    - Incident class ratios
    - Feature distributions
 3. View **Global Model Insights** (SHAP beeswarm, feature importance, risk-score distribution).
