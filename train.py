@@ -95,18 +95,20 @@ cm = confusion_matrix(y_test, y_pred, labels=clf.classes_)
 fig, ax = plt.subplots(figsize=(4,4))
 sns.heatmap(cm, annot=True, fmt="d", xticklabels=clf.classes_, yticklabels=clf.classes_, ax=ax)
 fig.savefig("cm_test.png", bbox_inches="tight")
-"""
+
 #SHAP explanations
 print("\nComputing SHAP values")
 explainer = shap.TreeExplainer(clf)
 shap_values = explainer(X_test)
 
 #summary plot
-shap.summary_plot(shap_values, X_test)
+shap.summary_plot(shap_values, X_test, show=False)
+plt.savefig('global_summary_plot.png')
 
 #summary plot for TruePositive (0:BenignPositive,1:FalsePositive,2:TruePositive)
-shap.summary_plot(shap_values[:, :, 2], X_test)
-    """
+shap.summary_plot(shap_values[:, :, 2], X_test, show=False)
+plt.savefig('truePositive_summary_plot.png')
+
 #Save model
 joblib.dump(clf, "model.pkl")
 
